@@ -4,3 +4,9 @@
 내용 : 파이썬 String 실습하기 교재 p48
 '''
 
+# 문자열 더하기
+str1 = 'Hello'
+str2 = 'Python'
+str3 = str1 + str2
+
+print("reslult : " + str3)
