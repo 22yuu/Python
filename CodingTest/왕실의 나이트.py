@@ -23,8 +23,6 @@ column = int(ord(input_data[0])) - int(ord('a')) + 1
 print(f' row : {row}, column : {column}')
 
 result = 0
-map = [[0]*8 for _ in range(8)]
-
 
 result += move((row-1)+2, (column-1)+1)
 result += move((row-1)+2, (column-1)-1)
@@ -37,6 +35,44 @@ result += move((row-1)+1, (column-1)-2)
 result += move((row-1)-1, (column-1)-2)
 
 print(result)
+
+'''
+쌤 풀이
+'''
+
+result = 0
+
+# 오른쪽 2칸, 위쪽 1칸
+next_row = row + 2
+next_col = column - 1
+
+# 오른쪽 2칸, 아래쪽 1칸
+next_row = row + 2
+next_col = column + 1
+
+# 왼쪽 2칸, 위쪽 1칸
+next_row = row - 2
+next_col = column - 1
+
+# 왼쪽 2칸, 아래쪽 1칸
+next_row = row - 2
+next_col = column + 1
+
+# 위쪽 2칸, 오른쪽 1칸
+next_row = row + 1
+next_col = column - 2
+
+# 위쪽 2칸, 왼쪽 1칸
+next_row = row - 1
+next_col = column - 2
+
+# 아래쪽 2칸, 오른쪽 1칸
+next_row = row + 1
+next_col = column + 2
+
+# 아래쪽 2칸 왼쪽 1칸
+next_row = row - 1
+next_col = column + 2
 
 
 
